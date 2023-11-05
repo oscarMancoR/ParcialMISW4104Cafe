@@ -19,7 +19,7 @@ export class ListarCafeComponent implements OnInit {
   constructor(private cafeService:CafeService) {
    
    }
-
+   //obtene el servicio del api
   getCafes():void{
     this.cafeService.getCafes().subscribe((cafe) =>{
       this.cafes = cafe;
@@ -28,6 +28,7 @@ export class ListarCafeComponent implements OnInit {
     })
   }
 
+  //contador de tipos de café
   contarTipos() {  
 
     for (const totalTipos of this.totalesPorTipo) {
@@ -38,13 +39,12 @@ export class ListarCafeComponent implements OnInit {
       }
     }
 
-    console.log(this.contador); // Esto imprimirá el objeto con el conteo de ciudades
+    console.log(this.contador); // Esto imprimirá el objeto con el conteo de tiposde cafe
   }
   
 
   ngOnInit() {
-    this.getCafes();
-      
+    this.getCafes();      
   }
 
   

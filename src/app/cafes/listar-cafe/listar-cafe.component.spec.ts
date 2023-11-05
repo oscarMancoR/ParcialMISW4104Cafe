@@ -55,5 +55,9 @@ describe('ListarCafeComponent', () => {
     expect(debug.queryAll(By.css('tbody tr'))).toHaveSize(3)
   });
  
+  it('should have a thead tag on the tabl', () => {
+    expect(debug.queryAll(By.css('thead'))).toHaveSize(1)
+  });
+ 
  
 });

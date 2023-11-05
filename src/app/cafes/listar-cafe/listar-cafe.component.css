@@ -1,4 +1,4 @@
-.contienTituloImg{
+.margingeneral{
    margin: 0 83px 0 113px;;
 }
 
@@ -13,13 +13,16 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    
    
     
     }
 
-    .tabla-completa{
-        margin: 17px 0 17px 98px;
+    .tabla-completa{       
         font-family: 'inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21.78px;
     }
 
     .table-head{
