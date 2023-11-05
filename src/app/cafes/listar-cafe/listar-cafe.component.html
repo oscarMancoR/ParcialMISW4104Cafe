@@ -18,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let cafe of cafes">
+          <tr *ngFor="let cafe of cafes" class="borde-fila">
             <td class="espacioColumn1">{{cafe.id}}</td>
             <td class="espacioColumn">{{cafe.nombre}}</td>
             <td class="espacioColumn">{{cafe.tipo}}</td>
@@ -27,4 +27,14 @@
         </tbody>
       </table>
     </div>
+
+  <div class="tabla-completa">
+      <div *ngFor="let ciudad of contador | keyvalue">
+        {{ ciudad.key }} = {{ ciudad.value }}
+      </div>
+  </div>
+
+   
+
+
 

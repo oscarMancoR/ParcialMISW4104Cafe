@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    font-weight: bold;
+   
     
     }
 
@@ -31,4 +31,8 @@
     }
     .espacioColumn1{
         padding-right: 40px;
+    }
+
+    .borde-fila{
+        border-bottom: 1px solid #747272;
     }

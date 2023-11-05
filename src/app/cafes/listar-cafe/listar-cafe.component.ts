@@ -3,6 +3,7 @@ import { CafeService } from '../cafe.service';
 import { Cafe } from '../cafe';
 
 
+
 @Component({
   selector: 'app-listar-cafe',
   templateUrl: './listar-cafe.component.html',
@@ -12,16 +13,40 @@ export class ListarCafeComponent implements OnInit {
 
   cafes:Array<Cafe>= [];
 
-  constructor(private cafeService:CafeService) { }
+  totalesPorTipo: Cafe[]=[];
+  contador: {[key: string]: number} = {};
+
+  constructor(private cafeService:CafeService) {
+   
+   }
 
   getCafes():void{
     this.cafeService.getCafes().subscribe((cafe) =>{
       this.cafes = cafe;
+      this.totalesPorTipo = cafe;
+      this.contarTipos();
     })
   }
 
+  contarTipos() {  
+
+    for (const totalTipos of this.totalesPorTipo) {
+      if (this.contador[totalTipos.tipo]) {
+        this.contador[totalTipos.tipo]++;
+      } else {
+        this.contador[totalTipos.tipo] = 1;
+      }
+    }
+
+    console.log(this.contador); // Esto imprimirá el objeto con el conteo de ciudades
+  }
+  
+
   ngOnInit() {
     this.getCafes();
+      
   }
+
+  
 
 }
