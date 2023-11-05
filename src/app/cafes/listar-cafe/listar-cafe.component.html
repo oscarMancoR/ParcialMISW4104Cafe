@@ -1,38 +1,52 @@
   <div class="container-fluid">
-    <div class="container">
-      <h1 class="titulo"> El aroma mágico</h1>
-      <img 
-        src="assets/img/cafe.jpg"
-        alt="granos de café">
-    </div>  
-  </div> 
- 
-    <div class="tabla-completa" >
-      <table class= tabla>
-        <thead class="table-head">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Tipo</th>
-            <th scope="col">Región</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let cafe of cafes" class="borde-fila">
-            <td class="espacioColumn1">{{cafe.id}}</td>
-            <td class="espacioColumn">{{cafe.nombre}}</td>
-            <td class="espacioColumn">{{cafe.tipo}}</td>
-            <td class="espacioColumn">{{cafe.region}}</td>           
-          </tr>  
-        </tbody>
-      </table>
+    <div class="row">
+      <div class="col">
+        <div class="contienTituloImg">
+          <h1 class="titulo"> El aroma mágico</h1>
+          <img 
+            src="assets/img/cafe.jpg"
+            alt="granos de café"
+            width="1244px"
+            height="323px">
+        </div>  
+      </div>  
+     </div> 
+    <div class="row">
+      <div class="col-12">
+        <div class="tabla-completa" >
+          <table class=tabla>
+            <thead class="table-head">
+              <tr>
+                <th scope="col" class="espacioColumn1">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Región</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cafe of cafes" class="borde-fila">
+                <td class="espacioColumn1" >{{cafe.id}}</td>
+                <td class="espacioColumn">{{cafe.nombre}}</td>
+                <td class="espacioColumn">{{cafe.tipo}}</td>
+                <td class="espacioColumn">{{cafe.region}}</td>           
+              </tr>  
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-  <div class="tabla-completa">
-      <div *ngFor="let ciudad of contador | keyvalue">
-        {{ ciudad.key }} = {{ ciudad.value }}
+    <div class="row">
+      <div class="col">
+          <div class="tabla-completa">
+              <div *ngFor="let ciudad of contador | keyvalue">
+                {{ ciudad.key }} = {{ ciudad.value }}
+              </div>
+          </div>
       </div>
-  </div>
+    </div>
+
+</div> 
 
    
 

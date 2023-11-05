@@ -1,6 +1,8 @@
-.container{
+.contienTituloImg{
    margin: 0 83px 0 113px;;
 }
+
+
 
 
 .titulo { 
@@ -17,7 +19,7 @@
 
     .tabla-completa{
         margin: 17px 0 17px 98px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'inter';
     }
 
     .table-head{
@@ -28,9 +30,12 @@
 
     .espacioColumn{
         padding-right: 15px;
+        
     }
     .espacioColumn1{
         padding-right: 40px;
+        padding-left: 10px;
+        font-weight: bold;
     }
 
     .borde-fila{
